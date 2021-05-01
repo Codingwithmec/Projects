@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Digital Clock</title>
+    <style>
+        body{
+            background-color: darkslateblue;
+        }
+        h1{
+            color: cyan;
+            text-align: center;
+            text-shadow: 0px 0px 10px whitesmoke;
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <h1 id="date"></h1>
+    <script>
+      
+      window.onerror=function(x,y,z)
+      {
+          alert(x);
+          alert("this is the file "+y);
+          alert( "line number" +z);
+
+      }
+      function Clock ()
+      {
+            //date is in javascript
+var time = new Date(); // time variable is storing a new 'Date' Object
+    var hour = time.getHours()
+    var min = time.getMinutes()
+    var sec = time.getSeconds()
+    var ampm = "am";
+
+    console.log(hour)
+    
+    
+    if( hour > 12){
+        hour = hour - 12;
+        ampm = "pm"
+    }
+
+    if(min<10){min = "0" + min}
+    if(sec<10){sec = "0" + sec}
+    if(hour<10){hour = "0" + hour}
+    if (hour>12) {hour = hour - 12}
+    var x = hour + ":" +min + ":" + sec +ampm ;
+    document.getElementById("time").innerHTML = x ;
+
+  
+      }
+
+      function dat()
+      {
+        var time = new Date();   
+    var day = time.getDate()
+    var month = time.getMonth() + 1;
+    var year = time.getFullYear() 
+    
+
+    if(day<10){day = "0" + day}
+    if(month<10){month = "0" + month}
+    
+   
+
+    
+var y = day +"/" + month +"/"+ year;
+document.getElementById("date").innerHTML = y ;
+
+      }
+
+
+
+
+      setInterval(Clock,1000)
+      setInterval(dat, 1000)
+    </script>
+</body>
+</html>

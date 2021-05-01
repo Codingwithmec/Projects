@@ -1,0 +1,35 @@
+<html >
+<head>
+    <style>
+        .loader{
+            width: 130px;
+            height: 130px;
+            border: gray 15px solid;
+             border-radius: 50%; 
+          
+           
+            animation-name: loader;
+            animation-duration: 5s ;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            border-top: red 15px solid;
+            position: absolute;
+           
+
+  
+
+  
+           /* animation-direction: alternate; */
+            
+        }
+        @keyframes loader {
+            0%{transform: rotate(0deg) ;}
+            100%{ transform: rotate(360deg);}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+</body>
+</html> 

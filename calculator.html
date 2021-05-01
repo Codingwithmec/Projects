@@ -1,0 +1,78 @@
+
+<html >
+<head>
+    
+    <title> Calculator</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: black;
+        }
+     .container{
+       border: cyan 5px solid;
+       width: 230px;
+       padding: 60px;
+       text-align: center;
+        margin: auto;
+        border-radius: 10px;
+     }
+     label{
+         color: darkviolet;
+     }
+    
+     h1{
+         color: ghostwhite;
+     }
+    </style>
+</head>
+<body>
+   
+    <h1> Calculator</h1>
+    <div class="container">
+<label> Number 1 </label> <br>
+
+<input type="text" placeholder="Enter the first number" id="num1">  
+
+<br><br>
+
+<label> Number 2 </label>    <br>
+<input type="text" placeholder="Enter the second number" id="num2"> 
+
+<br><br>
+
+<select id="choice">
+    <option value="" disable selected> Select your choice</option>
+    <option value="+"> Addition ( + )</option>
+    <option value="-"> Subtraction ( - )</option>
+    <option value="*"> Mulitiplacation ( x )</option>
+    <option value="/"> Divition ( / )</option>
+</select>
+</div>
+ <br><br>
+<h1 id="head">    </h1>
+
+ <button onclick="calc()">Calculate</button>
+   
+   
+   
+   <script>
+    
+    function calc()
+    {
+       var num1 = Number (document.getElementById("num1").value);
+       var num2 = Number (document.getElementById("num2").value);
+       
+       var choice = document.getElementById("choice").value;
+
+       if( choice == "+") { var result = num1 + num2 ; }
+       if( choice == "-") { var result = num1 - num2 ; }
+       if( choice == "*") { var result = num1 * num2 ; }
+       if( choice == "/") { var result = num1 / num2 ; }
+    
+     document.getElementById("head").innerHTML = result ;
+    
+    }
+    </script>
+   
+</body>
+</html>

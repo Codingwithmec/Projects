@@ -1,0 +1,60 @@
+
+<html >
+<head>
+    <style>
+        .loader{
+            width: 130px;
+            height: 130px;
+            border: gray 15px solid;
+             border-radius: 50%; 
+           
+            animation-name: loader;
+            animation-duration: 5s ;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            border-top: red 15px solid;
+           /* animation-direction: alternate; */
+           margin: auto;
+           margin-top: 15%;
+            
+        }
+        @keyframes loader {
+            0%{transform: rotate(0deg) ;}
+            100%{ transform: rotate(360deg);}
+
+        }
+        #container{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1> My Webpage</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Eveniet mollitia accusamus quibusdam in illo, quos minima 
+            recusandae accusantium similique aperiam rem suscipit deserunt iure reiciendis officiis velit impedit molestiae. Fugit voluptates iure incidunt aliquam quam.
+             Fuga sed ipsum necessitatibus, sapiente eligendi veritatis voluptatibus iusto culpa voluptatem beatae earum temporibus voluptas rerum obcaecati,
+            fugit delectus hic consectetur reiciendis adipisci ex commodi. Maiores voluptatum aperiam, blanditiis autem, iure iusto totam et obcaecati
+             at reiciendis ratione quod a vero doloremque ducimus repellat quae animi repudiandae dolor distinctio illum debitis. A nihil, delectus voluptas
+              facere corrupti veniam iusto quis amet optio voluptatum ipsum enim. Inventore aut sequi illum qui! Ullam placeat illo iusto neque officia deserunt
+             pariatur quibusdam id obcaecati magni ea sed, ab repudiandae facere ad minus nulla natus. Esse, voluptatum, labore aliquam nobis ex obcaecati rem,
+               dignissimos eaque excepturi nam ad. Eligendi quos exercitationem numquam provident illo maxime sunt quidem fugit reprehenderit, nesciunt harum quae
+             nisi recusandae ut quod voluptatum corporis magni doloribus officia tempore sed alias! Delectus sint veritatis vero quibusdam, fac
+            aliquam necessitatibus. A, maiores rem iusto exercitationem ab iste quos aliquam cupiditate quod accusantium debitis perferendis alias molestiae,
+             quas animi consequatur beatae voluptatem ad unde! Quaerat veritatis quasi nam?</p>
+    </div>
+    <div id="loader" class="loader"></div>
+    <script>
+        function show()
+        {
+            document.getElementById("container").style.display = "block";
+            document.getElementById("loader").style.display = "none";
+
+        }
+//setTimeout is used to call your function once after a specific time interval
+
+        setTimeout(show , 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.container{
+    border: 3px solid black;
+    width: 650px;
+    margin: auto;
+    padding: 20px;
+ 
+}
+
+label{
+    font-size: 30px;
+    font-family: cursive;
+}
+
+.input{
+    width: 100%;
+    margin-top: 8px;
+    padding: 7px;
+    border-radius: 10px ;
+    outline: none ;
+transition: all 5s;
+}
+    .input:hover{
+        background-color: blueviolet;
+    
+    }
+    
+.input:focus{
+    background-color: blueviolet;
+        
+
+}
+body{
+    background-image: url(ppi.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.loader{
+    width: 130px;
+    height: 130px;
+    border: gray 15px solid;
+     border-radius: 50%; 
+   
+    animation-name: loader;
+    animation-duration: 5s ;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    border-top: red 15px solid;
+   margin: auto;
+   margin-top: 15%;
+    
+}
+@keyframes loader {
+    0%{transform: rotate(0deg) ;}
+    100%{ transform: rotate(360deg);}
+
+}
+#pototo{
+    display: none;
+}

@@ -1,0 +1,36 @@
+
+<html ></html>
+<head>
+    
+    <title>Annimation</title>
+    <style>
+        .container{
+            width: 125px;
+            height: 125px;
+            background-color: blueviolet;
+
+            position: relative;
+            animation: sample;
+            animation-duration: 5s ;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            animation-direction: alternate;
+        }
+        @keyframes sample{
+        0%{
+            top: 0px; background-color: grey; border: 4px groove purple; border-radius: 0%; }
+ 25%{ top: 25px; left: 100px; background-color:pink; border: 4px groove red; border-radius: 50%;}
+  50%{ top: 50px; left: 200px; background-color: greenyellow; border: 4px double black;  border-radius: 0%;}
+        75%{top: 75px; left: 200px; background-color: lightblue; border: 4px double blue; border-radius: 50%; } 
+          80%{top: 300px; background-color: black; border:4px dotted violet ; border-radius: 0%; } 
+        
+        100% {top:0px; background-color: green; border:4px groove yellow  ; border-radius: 50%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<html >
+<head>
+ <link rel="stylesheet" href="revision.css">
+    <title>survey form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <div id="pototo">
+
+    <h1>Survey on the effects of COVID 19, on regular everyday life <i class="fa fa-trash-o"></i></h1>
+    <div class="container">  
+
+
+<form action=""></form>
+
+<label for="fullname"> Name</label> <br>
+<input type="text" name="namel" placeholder="Enter Your Name Here"  id="fullname" class="input">
+<br>
+
+<label for="Mail"> Email</label> <br>
+<input type="email" name="Maila" placeholder="Enter Your Email Here"  id="Mail" class="input">
+<br>
+
+<label for="ageej"> Age</label> <br>
+<input type="number" name="age12" placeholder="Enter Your age Here"  id="ageej" class="input">
+<br>
+<label>which is the best describes your current occupation </label>
+<br>
+<select name="select current role" class="input">
+    <option disabled selected> Select current role</option>
+<option> Student</option>
+<option> Full Time Worker</option>  
+<option> unmemployed</option>
+<option> prefer not to say</option>
+<option> other </option>
+</select>
+<br>
+<lable>Would you say COVID-19 has distubed your occupation?</lable> <br>
+<label   > <input type="radio"  name="r1"> Definatly </label> <br>
+<label   > <input type="radio"  name="r1"> maybe </label> <br>
+<label   > <input type="radio"  name="r1"> not sure </label> <br>
+<br> 
+
+<label>What is the most difficult thing you've experienced throughout this Plague? </label>
+<br>
+<select name="select current role" class="input">
+    <option disabled selected> Select an option </option>
+<option> workplace challanges</option>
+<option> working from home </option>  
+<option> lack of outdoor activitys </option>
+<option>fianancal issues </option>
+</select>
+<br> <br>
+<label>What would you say is the one positive in your life due to this new situation? (Check all that apply) </label> <br>
+<label   > <input type="checkbox"  name=""> Spending time with family </label> <br> <br>
+<label   > <input type="checkbox"  name=""> More time for self improvement</label> <br> <br>
+<label   > <input type="checkbox"  name="">Easier to maintain fitness and eat healthier  </label> <br><br>
+<label   > <input type="checkbox"  name=""> More time for hobbies </label> <br> <br>
+<label   > <input type="checkbox"  name=""> impact on global environment</label> <br> <br>
+<label   > <input type="checkbox"  name=""> Easier to be lazy </label> <br> <br>
+<br><br>
+<label> Any comments or suggestions?????</label> <br>
+
+<textarea placeholder="Comments here plz " class="input"></textarea> <br>
+
+<input type="submit" class="input">
+
+</div>
+
+    <script>
+        function show()
+        {
+            document.getElementById("pototo").style.display = "block";
+            document.getElementById("loader").style.display = "none";
+
+        }
+
+        setTimeout(show , 5000);
+    </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>   Quiz    </title>
+    </head>
+     <style>
+      body{
+            text-align: center;
+            background-color: black;
+        }
+     .container{
+       border: cyan 5px solid;
+       width: 330px;
+       padding: 90px;
+       text-align: center;
+        margin: auto;
+        border-radius: 10px;
+     }
+     label{
+         color: darkviolet;
+     }
+     
+     p,h1{
+         color: ghostwhite;
+     }
+
+     button, h2
+     {
+       color:deepskyblue;
+     }
+
+     </style>
+
+
+
+
+    <body>
+      <div class="container">
+        <H1>
+            The Harry Potter Quiz
+        </H1>
+        
+        <p>  1. What is voldomorts real name  ?  </p>
+        <label>   <input type="radio"  name="q1"  >   liam Rattale       </label>             <br>
+        <label>   <input type="radio"  name="q1"   >   Tack rello      </label>             <br>
+        <label>   <input type="radio"  name="q1"  class="answer" >   Tom Riddle   </label>             <br>
+        <label>   <input type="radio"  name="q1"  >   Tomouse riddle   </label>             <br>
+
+
+
+        <p>  2. Who is Harry potters godfather ?  </p>
+        <label>   <input type="radio"  name="q2"  >   james Potter        </label>             <br>
+        <label>   <input type="radio"  name="q2"  class="answer" >   Sirius  Black     </label>             <br>
+        <label>   <input type="radio"  name="q2"  >   Professor lupin     </label>             <br>
+        <label>   <input type="radio"  name="q2"  >   Auther Weasly   </label>             <br>
+
+        
+        <p>  3. Who are Harry Potters best friends?  </p>
+        <label>   <input type="radio"  name="q3"  >   Ron and seamian       </label>             <br>
+        <label>   <input type="radio"  name="q3"   >   Luna and Ginny     </label>             <br>
+        <label>   <input type="radio"  name="q3"  >   Fred and George      </label>             <br>
+        <label>   <input type="radio"  name="q3"  class="answer">   Ron and Hemionie     </label>             <br>
+
+
+        <p>  4. Which school does Harry go to  ?  </p>
+        <label>   <input type="radio"  name="q4"  >   nozzle  school of witchcraft and Wizardry      </label>             <br>
+        <label>   <input type="radio"  name="q4"  class="answer" >  Hogwarts school of witchcraft and Wizardry     </label>             <br>
+        <label>   <input type="radio"  name="q4"  >   Selision   school of witchcraft and Wizardry    </label>             <br>
+        <label>   <input type="radio"  name="q4"  >    kikiwaka school of witchcraft and Wizardry   </label>             <br>
+
+
+        <p>  5. Who is Harry enemy at school  ?  </p>
+        <label>   <input type="radio"  name="q5"  >   luna Lovegood    </label>             <br>
+        <label>   <input type="radio"  name="q5"   >   bob banana     </label>             <br>
+        <label>   <input type="radio"  name="q5" class="answer" >   Draco Malfoy     </label>             <br>
+        <label>   <input type="radio"  name="q5"  >   flar de la core    </label>             <br>
+
+
+        <p>  6. Who is Cornelius Fudge  ?  </p>
+        <label>   <input type="radio"  name="q6"  >   a death eaters        </label>             <br>
+        <label>   <input type="radio"  name="q6"   >   A  unimportent person     </label>             <br>
+        <label>   <input type="radio"  name="q6"  >   a crued person    </label>             <br>
+        <label>   <input type="radio"  name="q6" class="answer" >   The ministry of magic   </label>             <br>
+
+        <p>  7. What is Askaban ?  </p>
+        <label>   <input type="radio"  name="q7"  class="answer">   A prison      </label>             <br>
+        <label>   <input type="radio"  name="q7"  >   A shop      </label>             <br>
+        <label>   <input type="radio"  name="q7"  >   A building      </label>             <br>
+        <label>   <input type="radio"  name="q7"  >   Voldomorts secret lair    </label>             <br>
+
+        <p>  8. Who are the guards of Askaban ?  </p>
+        <label>   <input type="radio"  name="q8"  > Death Eaters         </label>             <br>
+        <label>   <input type="radio"  name="q8"  class="answer" > Dementors    </label>             <br>
+        <label>   <input type="radio"  name="q8"  >    The Cornel Army     </label>             <br>
+        <label>   <input type="radio"  name="q8"  >  The Phoenix's   </label>             <br>
+
+        <p>  9. who died at the end of the story   ?  </p>
+        <label>   <input type="radio"  name="q9"  >   Harry Potter  </label>             <br>
+        <label>   <input type="radio"  name="q9"  class="answer">   Lord Voldomort    </label>             <br>
+
+        <p>  10. Which sentance is true  ?  </p>
+        <label>   <input type="radio"  name="q10"  >     Ronald Weasly Died    </label>             <br>
+        <label>   <input type="radio"  name="q10"   >      Hemionie had killed a snake    </label>             <br>
+        <label>   <input type="radio"  name="q10"  class="answer">   Harry Potter distroyed the elder wand   </label>             <br>
+        <label>   <input type="radio"  name="q10"  >   Molly Weasly killed bellatrix lastrange  </label>             <br>
+
+        <button   onclick="check()">    Submit  </button>
+        <h2 id="result">   </h2>
+      </div>
+       <script>
+              
+              function check(){
+                  var x = document.getElementsByClassName("answer") ; 
+                  var score = 0 ; 
+
+                  for( i = 0 ;  i < x.length ; i++)
+                  {
+                      if(x[i].checked == true ) {   score++ ; }
+                  }
+                  document.getElementById("result").innerHTML = score ; 
+              }
+
+        </script>
+    </body>
+</html>

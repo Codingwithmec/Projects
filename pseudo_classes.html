@@ -1,0 +1,67 @@
+<html>
+<head>
+    <style>
+        /* Pseudo Classes */
+
+        h1:hover{   color : red ;     }
+        p:first-child {  background-color: magenta; }
+        li:first-child { background-color: mediumvioletred;  }
+         p:last-child { background-color: rgb(139, 77, 175);}
+         li:nth-child(3) { font-size: 22px;}
+
+       a:link{ color: rgb(139, 77, 175);}
+       a:visited { color: rgb(173, 17, 187); }
+       a:active{ color: royalblue;}
+       :target{border: ridge 4px royalblue;}
+
+
+       input:focus{ padding : 10px ;  border: blueviolet 4px groove;}
+
+input:valid{ background-color: lightgreen;}
+input:invalid{ background:crimson ;}
+
+p::first-letter{ font-size: 40px; color: blueviolet; font-family: algerian; }
+  
+  h1:hover:after{
+   content: "Thank you for visting";
+  }
+  h1:hover:before{
+content:" Contact us on : +16 4357 782 124";
+  }
+
+  ::placeholder{
+ color: crimson;
+  }
+</style>
+</head>
+<body>
+    
+    <h1>  My webpage    </h1>
+    <a href="">   This is an anchor tag   </a>    <br>  <br>
+    <a href="#i6">   Click here to go to the bottom of the page   </a>         <br>    <br>
+    <a href="#i2">   Click to go to 2nd list item  </a>         <br>    <br>
+
+    <input type="email"     placeholder="Enter your email ">    <br><br>
+
+    <div>
+
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse sint blanditiis dolor assumenda odio eveniet facere nemo saepe optio!</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse sint blanditiis dolor assumenda odio eveniet facere nemo saepe optio!</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse sint blanditiis dolor assumenda odio eveniet facere nemo saepe optio!</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse sint blanditiis dolor assumenda odio eveniet facere nemo saepe optio!</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse sint blanditiis dolor assumenda odio eveniet facere nemo saepe optio!</p>
+
+    </div>
+
+
+    <ol>
+        <li> List item  </li>
+        <li id="i2"> List item  </li>
+        <li> List item  </li>
+        <li> List item  </li>
+        <li> List item  </li>
+        <li id="i6"> List item  </li>
+    </ol>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>   Form Validations  </title>
+    </head>
+    <body>
+        
+        <form    onsubmit="return validate()">
+        <input type="text"     placeholder="Username" id="usname">                         <br>
+        <input type="password"  placeholder="Password"  id="p1">    <label id="label1">   </label>           <br>
+        <input type="password"  placeholder="Confirm Password"  id="p2">             <br><br>
+        <input type="checkbox"   id="c1">  Accept T&C                 <br><br>
+         <input type="submit">
+        </form>
+
+        <script>
+
+            function validate(){
+                var p1 = document.getElementById("p1").value ; 
+                var p2 = document.getElementById("p2").value ;  
+                var c1 = document.getElementById("c1") ; 
+                var usname = document.getElementById("usname").value;
+
+               // var regexp = /abc/ ;
+               //var regexp = /[axzy]bc/ ;
+              // var regexp = /[a-z A-Z 0-9]00/ ;
+               //var regexp = /[a-z A-Z 0-9]{3}00/ ;
+              // var regexp = /^04[0-9]{8}$/ ;
+              var regexp = /[a-z A-Z 0-9]{2,50}@[a-z A-Z]{2,8}\.[a-z A-Z]{2,5} /;
+                if( regexp.test(usname) )
+                {
+                    alert("valid");
+                }
+                else
+                {
+                    alert("invalid")     ; 
+                }
+
+
+                if( !c1.checked )
+                {
+                    alert("You have to accept T&Cs. ");
+                    return false ;  
+                }
+                if( p1 != p2)
+                {
+                    // alert("Passwords are not matching ... ") ; 
+                    document.getElementById("label1").innerHTML = "Passwords not matching " ; 
+                    document.getElementById("label1").style.color = "red " ; 
+                    document.getElementById("p1").style.border = "red 2px solid" ; 
+                    return false ; 
+                }
+
+                if(p1.length == 0 )
+                {
+                    document.getElementById("label1").innerHTML = "Password can't be empty " ; 
+                    document.getElementById("label1").style.color = "red " ; 
+                    return false ; 
+                }
+
+                if( p1.trim().length == 0 )
+                {
+                    document.getElementById("label1").innerHTML = "Password can't contain only spaces" ;
+                    return false ;  
+                }
+
+
+            }
+
+        </script>
+
+    </body>
+</html>

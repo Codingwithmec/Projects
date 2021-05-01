@@ -1,0 +1,35 @@
+
+<html >
+<head>
+    <title>Image slider </title>
+    <style>
+        #box
+        {
+height: 350px;
+border: gold 10px groove;
+background-image: url(drawing.jpg);
+background-size: 100% 100%;
+transition: all 0.4s ;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="box"></div>
+   <script>
+
+       var images = ["drawing.jpg" , "hhhhh.jpg" , "ppi.jpg" , "image.jpeg"] ;
+       var i = 0 ; 
+       function slider()
+       {
+           i++; 
+           if( i >= 4) 
+           {
+              i = 0 ;
+           } 
+         document.getElementById("box").style.backgroundImage = "url(" + images[i] + ")" ;
+       }
+       setInterval(slider, 3000) ;
+   </script> 
+</body>
+</html>
